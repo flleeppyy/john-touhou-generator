@@ -70,7 +70,7 @@
         let second = actions[Math.floor(Math.random() * actions.length)]
 
         let result = `${first} *${second}*`;
-        if (second.includes('touhou')) {
+        if (second === "touhou") {
           result = `john touhou`
         }
         return result
