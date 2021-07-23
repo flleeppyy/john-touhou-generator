@@ -1,0 +1,3 @@
+# john-touhou-generator
+
+GENERATES STUFF THAT JOHN WOULD SAY BECAUSE... WHY NOT
