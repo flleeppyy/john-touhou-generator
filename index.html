@@ -25,9 +25,9 @@
         'you have a nice cock,',
         "you're trans?",
         'you drink genderfluid?',
-        "you drink mountain dew?",
-        "you drink cum?",
-        "you drink gatorade?",
+        'you drink mountain dew?',
+        'you drink cum?',
+        'you drink gatorade?',
         "you're bisexual?",
         'you have a cute voice,',
         'you look cute!',
@@ -49,10 +49,15 @@
         'passionately fucks you',
         'licks your face',
         'kisses you',
+        'kisses you passionately',
         'makes out with you',
         'fucks you',
         'unzips your pants',
         'pins you to a wall',
+        'grabs you and kisses you',
+        'picks you up and carries you to the bedroom',
+        'carries you to a love hotel',
+        'gives you a blowjob',
         'pins you to a wall and passionately makes out with you',
         'fucks you and then slowly pegs you',
         'fucks you and makes out with you',
@@ -60,17 +65,23 @@
         'cums',
         'cums in your face',
         'sucks you off',
-        "touhou",
-        "moans",
-        "looks at you seductively"
+        'touhou',
+        'moans',
+        'looks at you seductively',
+        'hugs you',
+        'hugs you tight',
+        'hugs you then kisses you',
+        'hugs you then kisses you passionately',
+        'hugs you then fucks you',
+
       ]
 
       function generateJohn() {
         let first = statements[Math.floor(Math.random() * statements.length)]
         let second = actions[Math.floor(Math.random() * actions.length)]
 
-        let result = `${first} *${second}*`;
-        if (second === "touhou") {
+        let result = `${first} *${second}*`
+        if (second === 'touhou') {
           result = `john touhou`
         }
         return result
