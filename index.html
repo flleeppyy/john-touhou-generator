@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>John Touhou Generator</title>
+</head>
+<body>
+  <main>
+    <div id="maincontainer">
+      <h2>John Touhou Generator</h2>
+      <h3>Github Copilot certified</h3>
+      <p>no joke like most of these results were generated with Github Copilot</p>
+      <button onclick="generate();">Generate</button>
+      <h3 id="result"></h3>
+    </div>
+  </main>
+  <script>
+    const statements = [
+      "you play on the chen minecraft server?",
+      "you eat pizza rolls?",
+      "you have a nice cock,",
+      "you're trans?",
+
+      "you drink genderfluid?",
+      "you're bisexual?",
+      "you have a cute voice,",
+      "you look cute!",
+      "i love you,",
+      "you like me?",
+      "you're taller than me?"
+      
+
+    ];
+
+    const actions = [
+      "gets wet",
+      "makes out with you passionately",
+      "slowly pegs you",
+      "passionately fucks you",
+      "licks your face",
+      "kisses you",
+      "makes out with you",
+      "fucks you",
+      "unzips your pants",
+      "pins you to a wall",
+      "pins you to a wall and passionately makes out with you",
+      "fucks you and then slowly pegs you",
+      "fucks you and makes out with you",
+      "fucks you and slowly pegs you and kisses you",
+      "cums",
+      "cums in your face",
+      "sucks you off",
+    ];
+
+    function generateJohn() {
+      let first = statements[Math.floor(Math.random() * statements.length)];
+      let second = actions[Math.floor(Math.random() * actions.length)];
+
+      return `${first} *${second}*`
+    }
+    function generate() {
+      // generate John Touhou
+      let result = generateJohn();
+      document.getElementById("result").innerHTML = result;
+    }
+  </script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+    * {
+      box-sizing: border-box;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      margin: 0;
+      background: #333;
+    }
+    main {
+      display: flex;
+      min-width: 100vw;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+    #maincontainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: lightcoral 2px solid;
+      border-radius: 8px;
+      flex-direction: column;
+      padding: 16px;
+    }
+
+    button {
+      outline: none;
+      padding: 4px;
+      margin: 8px;
+      border-radius: 4px;
+      border: #777 2px solid;
+      background: transparent;
+    }
+
+    #maincontainer > h2 {
+      margin: 12px;
+    }
+
+    h3 {
+      margin: 6px;
+    }
+
+  </style>
+</body>
+</html>
