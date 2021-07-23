@@ -12,12 +12,21 @@
         <h2>John Touhou Generator</h2>
         <h3>Github Copilot certified</h3>
         <p style="margin-bottom: 2px;">
-          no joke like most of these results were generated with Github Copilot
+          no joke like some of these results were generated with
+          <a href="https://copilot.github.com">Github Copilot</a>
         </p>
         <p style="margin-top: 0;">oh yeah, HARD nsfw warning lmao</p>
         <button onclick="generate();">Generate</button>
-        <h3 id="result"></h3>
+        <h3 id="result">click generate</h3>
+        <!-- Github link -->
       </div>
+      <a
+        style="margin: 12px;"
+        href="https://github.com/flleeppyy/john-touhou-generator"
+        target="_blank"
+      >
+        Github Repository
+      </a>
     </main>
     <script>
       const statements = [
@@ -29,6 +38,7 @@
         'you drink mountain dew?',
         'you drink cum?',
         'you drink gatorade?',
+        'you also like flowers?',
         "you're bisexual?",
         'you have a cute voice,',
         'you look cute!',
@@ -80,6 +90,17 @@
         'hugs you then fucks you',
         'hugs you then fucks you and kisses you',
         'hugs you then fucks you and kisses youPASSIONATELY',
+        'gives you a flower',
+        'takes you to the flower shop',
+        'calls you a good girl',
+        'meows',
+        'takes you on a date',
+        'holds hands with you',
+        'cuddles',
+        'headpats you',
+        'gives you headrubs',
+        'dresses you in cute clothes',
+        'princess carries you',
       ]
 
       function generateJohn() {
@@ -115,6 +136,7 @@
         min-height: 100vh;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
       }
       #maincontainer {
         display: flex;
