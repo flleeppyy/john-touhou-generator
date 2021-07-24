@@ -4,6 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Primary Meta Tags -->
+    <title>John Touhou Generator</title>
+    <meta name="title" content="John Touhou Generator" />
+    <meta name="description" content="john touhou!" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://flleeppyy.github.io/john-touhou-generator/" />
+    <meta property="og:title" content="John Touhou Generator" />
+    <meta property="og:description" content="john touhou!" />
+    <meta
+      property="og:image"
+      content="/assets/yuuka.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://flleeppyy.github.io/john-touhou-generator/" />
+    <meta property="twitter:title" content="John Touhou Generator" />
+    <meta property="twitter:description" content="john touhou!" />
+    <meta
+      property="twitter:image"
+      content="/assets/yuuka.png"
+    />
+
     <title>John Touhou Generator</title>
   </head>
   <body>
@@ -12,28 +40,29 @@
         <h2>John Touhou Generator</h2>
         <h3 id="randomtitle">Github Copilot certified</h3>
         <script>
-          var randomTitle = document.getElementById("randomtitle");
+          var randomTitle = document.getElementById('randomtitle')
           randomTitles = [
-            "The generator nobody asked for",
-            "i hate this",
-            "i have regrets",
-            "Github Copilot certified",
-            "john touhou",
-            "John Touhou",
-            "John Touhou Generator",
-            "John Touhou Generator Extreme",
-            "Lewd john touhou generator",
-            "Lewd John Touhou Generator",
-            "Lewd John Touhou Generator Extreme",
-            "Intense John Touhou",
-            "Intense John Touhou Generator",
-            "Intense John Touhou Generator Extreme",
-            "Lewd Intense John Touhou",
-            "Lewd Intense John Touhou Generator",
-            "Lewd Intense John Touhou Generator Extreme",
+            'The generator nobody asked for',
+            'i hate this',
+            'i have regrets',
+            'Github Copilot certified',
+            'john touhou',
+            'John Touhou',
+            'John Touhou Generator',
+            'John Touhou Generator Extreme',
+            'Lewd john touhou generator',
+            'Lewd John Touhou Generator',
+            'Lewd John Touhou Generator Extreme',
+            'Intense John Touhou',
+            'Intense John Touhou Generator',
+            'Intense John Touhou Generator Extreme',
+            'Lewd Intense John Touhou',
+            'Lewd Intense John Touhou Generator',
+            'Lewd Intense John Touhou Generator Extreme',
           ]
 
-          randomTitle.innerHTML = randomTitles[Math.floor(Math.random() * randomTitles.length)];
+          randomTitle.innerHTML =
+            randomTitles[Math.floor(Math.random() * randomTitles.length)]
         </script>
         <p style="margin-bottom: 2px;">
           no joke like some of these results were generated with
@@ -42,7 +71,8 @@
         <p style="margin-top: 0;">oh yeah, HARD nsfw warning lmao</p>
         <button onclick="generate();">Generate</button>
         <div>
-          <input type="checkbox" name="italics" id="italics"><span>Italics</span>
+          <input type="checkbox" name="italics" id="italics" />
+          <span>Italics</span>
         </div>
         <h3 id="result">click generate</h3>
         <!-- Github link -->
@@ -82,6 +112,7 @@
         'you have a nice personality,',
         'you have a nice sense of humor,',
         'you have a nice sense of self-worth,',
+        'you want to fuck me?',
       ]
 
       const actions = [
@@ -129,19 +160,36 @@
         'gives you headrubs',
         'dresses you in cute clothes',
         'princess carries you',
-        "puts you in a miniskirt and kneehighs"
+        'puts you in a miniskirt and kneehighs',
+        'douses you in cum',
+        'drenches you in cum',
+        'takes you to prom',
+        'takes your hand in marriage',
+        'gives you a fumo',
+        'puts on a maid oufit and cooks you a meal',
+        'teases you by eating a banana seductively',
+        'gives you a cat tail buttplug',
+        'compliments your cock',
+        'becomes hard',
+        'grabs your ass',
+        'whispers softly into your ear asmr style',
+        'sketches you',
+        'pinches your cheeks',
+        'feeds you sunflower seeds',
       ]
 
+      let first
+      let second
+
       function generateJohn() {
-        let first = statements[Math.floor(Math.random() * statements.length)]
-        let second = actions[Math.floor(Math.random() * actions.length)]
-        let italics = document.getElementById("italics").checked
+        first = statements[Math.floor(Math.random() * statements.length)]
+        second = actions[Math.floor(Math.random() * actions.length)]
 
         let result = `${first} *${second}*`
 
-        if (italics) {
-          result = ` ${first} <i>${second}</i>`
-        }
+        // if (italics) {
+        //   result = ` ${first} <i>${second}</i>`
+        // }
         if (second === 'touhou') {
           result = `john touhou`
         }
@@ -152,6 +200,8 @@
         let result = generateJohn()
         document.getElementById('result').innerHTML = result
       }
+
+      let italics = document.getElementById('italics').checked
     </script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
