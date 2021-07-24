@@ -10,7 +10,31 @@
     <main>
       <div id="maincontainer">
         <h2>John Touhou Generator</h2>
-        <h3>Github Copilot certified</h3>
+        <h3 id="randomtitle">Github Copilot certified</h3>
+        <script>
+          var randomTitle = document.getElementById("randomtitle");
+          randomTitles = [
+            "The generator nobody asked for",
+            "i hate this",
+            "i have regrets",
+            "Github Copilot certified",
+            "john touhou",
+            "John Touhou",
+            "John Touhou Generator",
+            "John Touhou Generator Extreme",
+            "Lewd john touhou generator",
+            "Lewd John Touhou Generator",
+            "Lewd John Touhou Generator Extreme",
+            "Intense John Touhou",
+            "Intense John Touhou Generator",
+            "Intense John Touhou Generator Extreme",
+            "Lewd Intense John Touhou",
+            "Lewd Intense John Touhou Generator",
+            "Lewd Intense John Touhou Generator Extreme",
+          ]
+
+          randomTitle.innerHTML = randomTitles[Math.floor(Math.random() * randomTitles.length)];
+        </script>
         <p style="margin-bottom: 2px;">
           no joke like some of these results were generated with
           <a href="https://copilot.github.com">Github Copilot</a>
