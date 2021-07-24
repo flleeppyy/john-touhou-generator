@@ -41,6 +41,9 @@
         </p>
         <p style="margin-top: 0;">oh yeah, HARD nsfw warning lmao</p>
         <button onclick="generate();">Generate</button>
+        <div>
+          <input type="checkbox" name="italics" id="italics"><span>Italics</span>
+        </div>
         <h3 id="result">click generate</h3>
         <!-- Github link -->
       </div>
@@ -117,6 +120,7 @@
         'gives you a flower',
         'takes you to the flower shop',
         'calls you a good girl',
+        'calls you a good boy',
         'meows',
         'takes you on a date',
         'holds hands with you',
@@ -125,13 +129,19 @@
         'gives you headrubs',
         'dresses you in cute clothes',
         'princess carries you',
+        "puts you in a miniskirt and kneehighs"
       ]
 
       function generateJohn() {
         let first = statements[Math.floor(Math.random() * statements.length)]
         let second = actions[Math.floor(Math.random() * actions.length)]
+        let italics = document.getElementById("italics").checked
 
         let result = `${first} *${second}*`
+
+        if (italics) {
+          result = ` ${first} <i>${second}</i>`
+        }
         if (second === 'touhou') {
           result = `john touhou`
         }
