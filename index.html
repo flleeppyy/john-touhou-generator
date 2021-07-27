@@ -9,16 +9,13 @@
     <title>John Touhou Generator</title>
     <meta name="title" content="John Touhou Generator" />
     <meta name="description" content="john touhou!" />
-    <meta name="theme-color" content="#6ef37c">
+    <meta name="theme-color" content="#6ef37c" />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://flleeppyy.github.io/john-touhou-generator/" />
     <meta property="og:title" content="John Touhou Generator" />
     <meta property="og:description" content="john touhou!" />
-    <meta
-      property="og:image"
-      content="assets/yuuka.png"
-    />
+    <meta property="og:image" content="assets/yuuka.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="1200" />
 
@@ -27,10 +24,7 @@
     <meta property="twitter:url" content="https://flleeppyy.github.io/john-touhou-generator/" />
     <meta property="twitter:title" content="John Touhou Generator" />
     <meta property="twitter:description" content="john touhou!" />
-    <meta
-      property="twitter:image"
-      content="assets/yuuka.png"
-    />
+    <meta property="twitter:image" content="assets/yuuka.png" />
 
     <title>John Touhou Generator</title>
   </head>
@@ -38,185 +32,204 @@
     <main>
       <div id="maincontainer">
         <h2>John Touhou Generator</h2>
-        <img
-          src="assets/yuuka.png"
-          alt="Smiling yuuka"
-          style="border-radius: 8px; border: 2px solid lightgreen; padding: 4px"
-        />
-        
+        <img src="assets/yuuka.png" alt="Smiling yuuka" style="border-radius: 8px; border: 2px solid lightgreen; padding: 4px" />
+
         <h3 id="randomtitle">Github Copilot certified</h3>
         <script>
-          var randomTitle = document.getElementById('randomtitle')
+          var randomTitle = document.getElementById("randomtitle");
           randomTitles = [
-            'The generator nobody asked for',
-            'i hate this',
-            'i have regrets',
-            'Github Copilot certified',
-            'john touhou',
-            'John Touhou',
-            'John Touhou Generator',
-            'John Touhou Generator Extreme',
-            'Lewd john touhou generator',
-            'Lewd John Touhou Generator',
-            'Lewd John Touhou Generator Extreme',
-            'Intense John Touhou',
-            'Intense John Touhou Generator',
-            'Intense John Touhou Generator Extreme',
-            'Lewd Intense John Touhou',
-            'Lewd Intense John Touhou Generator',
-            'Lewd Intense John Touhou Generator Extreme',
-          ]
+            "The generator nobody asked for",
+            "i hate this",
+            "i have regrets",
+            "Github Copilot certified",
+            "john touhou",
+            "John Touhou",
+            "John Touhou Generator",
+            "John Touhou Generator Extreme",
+            "Lewd john touhou generator",
+            "Lewd John Touhou Generator",
+            "Lewd John Touhou Generator Extreme",
+            "Intense John Touhou",
+            "Intense John Touhou Generator",
+            "Intense John Touhou Generator Extreme",
+            "Lewd Intense John Touhou",
+            "Lewd Intense John Touhou Generator",
+            "Lewd Intense John Touhou Generator Extreme",
+          ];
 
-          randomTitle.innerHTML =
-            randomTitles[Math.floor(Math.random() * randomTitles.length)]
+          randomTitle.innerHTML = randomTitles[Math.floor(Math.random() * randomTitles.length)];
         </script>
-        <p style="margin-bottom: 2px;">
+        <p style="margin-bottom: 2px">
           no joke like some of these results were generated with
           <a href="https://copilot.github.com">Github Copilot</a>
         </p>
-        <p style="margin-top: 0;">oh yeah, HARD nsfw warning lmao</p>
+        <p style="margin-top: 0">oh yeah, HARD nsfw warning lmao</p>
         <button onclick="generate();">Generate</button>
         <div>
-          <input type="checkbox" name="italics" id="italics" />
+          <input type="checkbox" name="italics" id="italics" ontoggle= />
           <span>Italics</span>
         </div>
-        <h3 id="result">click generate</h3>
+        <h3 id="result"><span id="text-first"></span><span id="text-mid"> </span><span id="text-second"></span></h3>
         <!-- Github link -->
       </div>
-      <a
-        style="margin: 12px;"
-        href="https://github.com/flleeppyy/john-touhou-generator"
-        target="_blank"
-      >
-        Github Repository
-      </a>
+      <a style="margin: 12px" href="https://github.com/flleeppyy/john-touhou-generator" target="_blank"> Github Repository </a>
     </main>
     <script>
-      const statements = [
-        'you play on the chen minecraft server?',
-        'you eat pizza rolls?',
-        'you have a nice cock,',
-        "you're trans?",
-        'you drink genderfluid?',
-        'you drink mountain dew?',
-        'you drink cum?',
-        'you drink gatorade?',
-        'you drink water?',
-        'you also like flowers?',
-        "you're bisexual?",
-        'you have a cute voice,',
-        'you look cute!',
-        'i love you,',
-        'you look hot!',
-        "you look like you're from a different planet,",
-        'you like me?',
-        "you're taller than me?",
-        'i really love your voice',
-        "you're such a sweetheart",
-        'you have a nice ass,',
-        'you have a nice face,',
-        'you have a nice body,',
-        'you have a nice personality,',
-        'you have a nice sense of humor,',
-        'you have a nice sense of self-worth,',
-        'you want to fuck me?',
-      ]
+      // What to do when the page is loaded
+      window.onload = function () {
+        const statements = [
+          "you play on the chen minecraft server?",
+          "you eat pizza rolls?",
+          "you have a nice cock,",
+          "you're trans?",
+          "you drink genderfluid?",
+          "you drink mountain dew?",
+          "you drink cum?",
+          "you drink gatorade?",
+          "you drink water?",
+          "you also like flowers?",
+          "you're bisexual?",
+          "you have a cute voice,",
+          "you look cute!",
+          "i love you,",
+          "you look hot!",
+          "you look like you're from a different planet,",
+          "you like me?",
+          "you're taller than me?",
+          "i really love your voice,",
+          "you're such a sweetheart,",
+          "you have a nice ass,",
+          "you have a nice face,",
+          "you have a nice body,",
+          "you have a nice personality,",
+          "you have a nice sense of humor,",
+          "you have a nice sense of self-worth,",
+          "you want to fuck me?",
+        ];
 
-      const actions = [
-        'gets wet',
-        'makes out with you passionately',
-        'slowly pegs you',
-        'passionately fucks you',
-        'licks your face',
-        'kisses you',
-        'kisses you passionately',
-        'makes out with you',
-        'fucks you',
-        'unzips your pants',
-        'pins you to a wall',
-        'grabs you and kisses you',
-        'picks you up and carries you to the bedroom',
-        'carries you to a love hotel',
-        'gives you a blowjob',
-        'pins you to a wall and passionately makes out with you',
-        'fucks you and then slowly pegs you',
-        'fucks you and makes out with you',
-        'fucks you and slowly pegs you and kisses you',
-        'cums',
-        'cums in your face',
-        'sucks you off',
-        'touhou',
-        'moans',
-        'looks at you seductively',
-        'hugs you',
-        'hugs you tight',
-        'hugs you then kisses you',
-        'hugs you then kisses you passionately',
-        'hugs you then fucks you',
-        'hugs you then fucks you and kisses you',
-        'hugs you then fucks you and kisses youPASSIONATELY',
-        'gives you a flower',
-        'takes you to the flower shop',
-        'calls you a good girl',
-        'calls you a good boy',
-        'meows',
-        'takes you on a date',
-        'holds hands with you',
-        'cuddles',
-        'headpats you',
-        'gives you headrubs',
-        'dresses you in cute clothes',
-        'princess carries you',
-        'puts you in a miniskirt and kneehighs',
-        'douses you in cum',
-        'drenches you in cum',
-        'takes you to prom',
-        'takes your hand in marriage',
-        'gives you a fumo',
-        'puts on a maid oufit and cooks you a meal',
-        'teases you by eating a banana seductively',
-        'gives you a cat tail buttplug',
-        'compliments your cock',
-        'becomes hard',
-        'grabs your ass',
-        'whispers softly into your ear asmr style',
-        'sketches you',
-        'pinches your cheeks',
-        'feeds you sunflower seeds',
-        'rubs your ears'
-      ]
+        const actions = [
+          "gets wet",
+          "makes out with you passionately",
+          "slowly pegs you",
+          "passionately fucks you",
+          "licks your face",
+          "kisses you",
+          "kisses you passionately",
+          "makes out with you",
+          "fucks you",
+          "unzips your pants",
+          "pins you to a wall",
+          "grabs you and kisses you",
+          "picks you up and carries you to the bedroom",
+          "carries you to a love hotel",
+          "gives you a blowjob",
+          "pins you to a wall and passionately makes out with you",
+          "fucks you and then slowly pegs you",
+          "fucks you and makes out with you",
+          "fucks you and slowly pegs you and kisses you",
+          "cums",
+          "cums in your face",
+          "sucks you off",
+          "touhou",
+          "moans",
+          "looks at you seductively",
+          "hugs you",
+          "hugs you tight",
+          "hugs you then kisses you",
+          "hugs you then kisses you passionately",
+          "hugs you then fucks you",
+          "hugs you then fucks you and kisses you",
+          "hugs you then fucks you and kisses youPASSIONATELY",
+          "gives you a flower",
+          "takes you to the flower shop",
+          "calls you a good girl",
+          "calls you a good boy",
+          "meows",
+          "takes you on a date",
+          "holds hands with you",
+          "cuddles",
+          "headpats you",
+          "gives you headrubs",
+          "dresses you in cute clothes",
+          "princess carries you",
+          "puts you in a miniskirt and kneehighs",
+          "douses you in cum",
+          "drenches you in cum",
+          "takes you to prom",
+          "takes your hand in marriage",
+          "gives you a fumo",
+          "puts on a maid oufit and cooks you a meal",
+          "teases you by eating a banana seductively",
+          "gives you a cat tail buttplug",
+          "compliments your cock",
+          "becomes hard",
+          "grabs your ass",
+          "whispers softly into your ear asmr style",
+          "sketches you",
+          "pinches your cheeks",
+          "feeds you sunflower seeds",
+          "rubs your ears",
+        ];
 
-      let first
-      let second
+        let first;
+        let second;
 
-      function generateJohn() {
-        first = statements[Math.floor(Math.random() * statements.length)]
-        second = actions[Math.floor(Math.random() * actions.length)]
+        let firstHtml = document.getElementById("text-first");
+        let secondHtml = document.getElementById("text-second");
 
-        let result = `${first} *${second}*`
+        firstHtml.innerHTML = "Click";
+        secondHtml.innerHTML = "generate";
 
-        // if (italics) {
-        //   result = ` ${first} <i>${second}</i>`
-        // }
-        if (second === 'touhou') {
-          result = `john touhou`
-        }
-        return result
-      }
-      function generate() {
-        // generate John Touhou
-        let result = generateJohn()
-        document.getElementById('result').innerHTML = result
-      }
+        let italicsCheckbox = document.getElementById("italics");
 
-      let italics = document.getElementById('italics').checked
+        window.generate = function () {
+          first = statements[Math.floor(Math.random() * statements.length)];
+          second = actions[Math.floor(Math.random() * actions.length)];
+
+          firstHtml.innerHTML = "";
+          secondHtml.innerHTML = "";
+
+          firstHtml.innerHTML = first;
+          secondHtml.innerHTML = second;
+
+          if (italicsCheckbox.checked !== true) {
+            document.getElementById("text-second").innerHTML = `*${second}*`;
+          } else {
+            document.getElementById("text-second").innerHTML = `<i>${second}</i>`;
+          }
+
+          if (second === "touhou") {
+            firstHtml.innerHTML = "john";
+            secondHtml.innerHTML = "touhou";
+          }
+          return result;
+        };
+
+        const italicsOntoggle = () => {
+          if (secondHtml.innerHTML === "generate") {
+            return;
+          }
+          if (italicsCheckbox.checked === true) {
+            if (secondHtml.innerHTML.indexOf("*") > -1) {
+              secondHtml.innerHTML = secondHtml.innerHTML.replace(/\*/g, "");
+            }
+            secondHtml.innerHTML = `<i>${secondHtml.innerHTML}</i>`;
+          } else {
+            secondHtml.innerHTML = secondHtml.innerHTML.replace(/<i>/g, "");
+            secondHtml.innerHTML = secondHtml.innerHTML.replace(/<\/i>/g, "");
+            secondHtml.innerHTML = `*${secondHtml.innerHTML}*`;
+          }
+        };
+        document.getElementById("italics").onchange = italicsOntoggle;
+      };
     </script>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
       * {
         box-sizing: border-box;
         color: white;
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
       }
       body {
         margin: 0;
