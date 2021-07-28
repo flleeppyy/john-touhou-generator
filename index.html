@@ -66,7 +66,7 @@
         <p style="margin-top: 0">oh yeah, HARD nsfw warning lmao</p>
         <button onclick="generate();">Generate</button>
         <div>
-          <input type="checkbox" name="italics" id="italics" ontoggle= />
+          <input type="checkbox" name="italics" id="italics" />
           <span>Italics</span>
         </div>
         <h3 id="result"><span id="text-first"></span><span id="text-mid"> </span><span id="text-second"></span></h3>
@@ -108,6 +108,7 @@
         ];
 
         const actions = [
+          "touhou",
           "gets wet",
           "makes out with you passionately",
           "slowly pegs you",
@@ -130,7 +131,6 @@
           "cums",
           "cums in your face",
           "sucks you off",
-          "touhou",
           "moans",
           "looks at you seductively",
           "hugs you",
@@ -169,6 +169,7 @@
           "pinches your cheeks",
           "feeds you sunflower seeds",
           "rubs your ears",
+          "feeds you a mango",
         ];
 
         let first;
@@ -206,6 +207,7 @@
         };
 
         const italicsOntoggle = () => {
+          secondHtml.innerHTML = secondHtml.innerHTML
           if (secondHtml.innerHTML === "generate") {
             return;
           }
@@ -220,7 +222,18 @@
             secondHtml.innerHTML = `*${secondHtml.innerHTML}*`;
           }
         };
-        document.getElementById("italics").onchange = italicsOntoggle;
+
+        document.getElementById("italics").onchange = italicsOntoggle();
+        document.body.addEventListener("keydown", (ev) => {
+          if (ev.keyCode === 32 || ev.keyCode === 71 || ev.keyCode === 13) {
+            generate();
+          }
+
+          if (ev.keyCode === 73) {
+            document.querySelector("input[id=italics]").checked ^= 1
+            italicsOntoggle();
+          };
+        });
       };
     </script>
     <style>
